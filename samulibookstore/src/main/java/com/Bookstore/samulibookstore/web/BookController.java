@@ -28,6 +28,12 @@ public class BookController {
 		repository.deleteById(bookId);
 		return "redirect:../booklist";
 	}
+	@RequestMapping(value="/edit/{id}")
+	public String editBook(@PathVariable("id") long bookId, Model model) {
+		model.addAttribute("book", repository.findById(bookId));
+		//model.addAttribute("books", repository.findAll());
+		return "addbook";
+	}
 	
 	@RequestMapping(value="/add")
 	public String addBook(Model model) {
