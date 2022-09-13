@@ -19,7 +19,10 @@ public class SamulibookstoreApplication  {
 	public CommandLineRunner demo(BookRepository repository) {
 		
 		return(args)->{
-
+			repository.save(new Book("Seppo Taalasmaa", "juupelis", 2010, "197434-2342", 345));
+			repository.save(new Book("Ismo Laitela", "jogggo", 2017, "197434-2342", 56));
+			repository.save(new Book("Suppo Laitela", "g", 2022, "197434-2342", 46));
+			repository.save(new Book("Osteri Ossi", "jofhhhfo", 1989, "197434-2342", 868));
 		};
 		
 	}

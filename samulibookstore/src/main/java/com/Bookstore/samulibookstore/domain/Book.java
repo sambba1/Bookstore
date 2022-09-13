@@ -13,18 +13,16 @@ public class Book {
 	
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    	private Long id;
-
-
+    private long id;
 	private String title;
 	private String author;
 	private int year;
 	private String isbn;
 	private double price;
 	
-	Book(){}
+	public Book(){}
 	
-	public Book(String title, String author, int year, String isbn, double price) {
+	public Book(String author, String title, int year, String isbn, double price) {
 		super();
 		this.title = title;
 		this.author = author;
