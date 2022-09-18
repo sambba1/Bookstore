@@ -12,7 +12,8 @@
 <body>
 
 <h1>Add book</h1>
-	<form th:object="${book}" th:action="@{save}" action="#" method="post">
+	<form th:object="${book}" th:action="@{../save}" action="#" method="post">
+	<input type="hidden" th:field="*{id}" class="form-control"/>
 	<label for="author">Author</label>
 	<input type="text" id="author" th:field="*{author}">
 	<label for="title">Title</label>
@@ -24,6 +25,13 @@
 	<label for="price">Price</label>
 	<input type="text" id="price" th:field="*{price}">
 	
+	<label for="catlist">Category</label>
+	<select id="catlist" th:field="*{category.categoryid}" class="form-control">
+		<option th:each="category:${categories}"
+			th:value="${category.categoryid}"
+			th:text="${category.name}"></option>
+	
+	</select>
 	
 	<input type="submit" value="Save"></input>
 	</form>
