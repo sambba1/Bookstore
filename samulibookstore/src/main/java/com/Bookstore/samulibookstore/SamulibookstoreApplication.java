@@ -9,6 +9,8 @@ import com.Bookstore.samulibookstore.domain.Book;
 import com.Bookstore.samulibookstore.domain.BookRepository;
 import com.Bookstore.samulibookstore.domain.Category;
 import com.Bookstore.samulibookstore.domain.CategoryRepository;
+import com.Bookstore.samulibookstore.domain.User;
+import com.Bookstore.samulibookstore.domain.UserRepository;
 
 @SpringBootApplication
 public class SamulibookstoreApplication  {
@@ -18,17 +20,20 @@ public class SamulibookstoreApplication  {
 	}
 
 	@Bean
-	public CommandLineRunner demo(BookRepository repository, CategoryRepository crepository) {
+	public CommandLineRunner demo(BookRepository brepository, CategoryRepository crepository, UserRepository urepository) {
 		
 		return(args)->{
+			urepository.save(new User("user", "$2y$10$iyEr.tfpe9q2NrY0B9ayAeVsd4ljb5VHP8y/ioV/rFXrz2fv624yG", "USER"));
+			urepository.save(new User("admin", "$2y$10$6P79CpftG0MpMstXlAgieuIZA3fRCD89iXHc8L6zTAcTLPyxjDAse", "ADMIN"));
 			
 			crepository.save(new Category("-"));
 			crepository.save(new Category("ismo kirjat"));
 			crepository.save(new Category("tomaatti"));
-			repository.save(new Book("Seppo Taalasmaa", "juupelis", 2010, "197434-2342", 345, crepository.findByName("-").get(0)));
-			repository.save(new Book("Ismo Laitela", "jogggo", 2017, "197434-2342", 56, crepository.findByName("-").get(0)));
-			repository.save(new Book("Suppo Laitela", "g", 2022, "197434-2342", 46, crepository.findByName("-").get(0)));
-			repository.save(new Book("Osteri Ossi", "jofhhhfo", 1989, "197434-2342", 868, crepository.findByName("-").get(0)));
+			
+			brepository.save(new Book("Seppo Taalasmaa", "juupelis", 2010, "197434-2342", 345, crepository.findByName("-").get(0)));
+			brepository.save(new Book("Ismo Laitela", "jogggo", 2017, "197434-2342", 56, crepository.findByName("-").get(0)));
+			brepository.save(new Book("Suppo Laitela", "g", 2022, "197434-2342", 46, crepository.findByName("-").get(0)));
+			brepository.save(new Book("Osteri Ossi", "jofhhhfo", 1989, "197434-2342", 868, crepository.findByName("-").get(0)));
 		};
 		
 	}

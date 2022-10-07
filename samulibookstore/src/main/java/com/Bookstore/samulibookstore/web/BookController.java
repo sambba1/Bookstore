@@ -20,6 +20,12 @@ import com.Bookstore.samulibookstore.domain.CategoryRepository;
 @Controller
 public class BookController {
 	
+	@RequestMapping(value="/login")
+    public String login() {	
+        return "login";
+    }	
+	
+	
 	@Autowired
 	private BookRepository repository;
 	@Autowired
