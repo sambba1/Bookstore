@@ -23,8 +23,8 @@ public class SamulibookstoreApplication  {
 	public CommandLineRunner demo(BookRepository brepository, CategoryRepository crepository, UserRepository urepository) {
 		
 		return(args)->{
-			//urepository.save(new User("user", "$2y$10$iyEr.tfpe9q2NrY0B9ayAeVsd4ljb5VHP8y/ioV/rFXrz2fv624yG", "USER"));
-			//urepository.save(new User("admin", "$2y$10$6P79CpftG0MpMstXlAgieuIZA3fRCD89iXHc8L6zTAcTLPyxjDAse", "ADMIN"));
+			urepository.save(new User("user", "$2y$10$iyEr.tfpe9q2NrY0B9ayAeVsd4ljb5VHP8y/ioV/rFXrz2fv624yG", "USER"));
+			urepository.save(new User("admin", "$2y$10$6P79CpftG0MpMstXlAgieuIZA3fRCD89iXHc8L6zTAcTLPyxjDAse", "ADMIN"));
 			
 			crepository.save(new Category("-"));
 			crepository.save(new Category("ismo kirjat"));
