@@ -31,9 +31,9 @@ public class SamulibookstoreApplication  {
 			crepository.save(new Category("tomaatti"));
 			
 			brepository.save(new Book("Seppo Taalasmaa", "juupeli", 2010, "197434-2342", 345, crepository.findByName("-").get(0)));
-			brepository.save(new Book("Ismo Laitela", "jogggo", 2017, "197434-2342", 56, crepository.findByName("-").get(0)));
-			brepository.save(new Book("Suppo Laitela", "g", 2022, "197434-2342", 46, crepository.findByName("-").get(0)));
-			brepository.save(new Book("Osteri Ossi", "jofhhhfo", 1989, "197434-2342", 868, crepository.findByName("-").get(0)));
+			//brepository.save(new Book("Ismo Laitela", "jogggo", 2017, "197434-2342", 56, crepository.findByName("-").get(0)));
+			//brepository.save(new Book("Suppo Laitela", "g", 2022, "197434-2342", 46, crepository.findByName("-").get(0)));
+			//brepository.save(new Book("Osteri Ossi", "jofhhhfo", 1989, "197434-2342", 868, crepository.findByName("-").get(0)));
 		};
 		
 	}
