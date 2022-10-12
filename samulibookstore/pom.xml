@@ -7,7 +7,7 @@
 		<version>2.7.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.Bookstore</groupId>
+	<groupId>com.Bookstore.samulibookstore</groupId>
 	<artifactId>samulibookstore</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
