@@ -20,7 +20,7 @@ import com.Bookstore.samulibookstore.domain.CategoryRepository;
 @Controller
 public class BookController {
 	
-	@RequestMapping(value="/login")
+	@RequestMapping(value={"/", "/login"})
     public String login() {	
         return "login";
     }	
@@ -31,7 +31,7 @@ public class BookController {
 	@Autowired
 	private CategoryRepository crepository;
 	
-	@RequestMapping(value={"/", "/booklist"})
+	@RequestMapping(value="/booklist")
 	public String bookStore(Model model) {
 		model.addAttribute("books", repository.findAll());
 		return "booklist";
